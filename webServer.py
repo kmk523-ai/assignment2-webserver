@@ -37,7 +37,7 @@ def webServer(port=13331):
 
       #Content-Type is an example on how to send a header as bytes. There are more!
       data = b"Content-Type: text/html; charset=UTF-8\r\n"
-      data = b"HTTP/1.1 200 OK\r\nServer: Server\r\n" + data + b"\r\n"
+      data = b"HTTP/1.1 200 OK\r\nServer: Server\r\nConnection: close\r\n" + data + b"\r\n"
 
       #Note that a complete header must end with a blank line, creating the four-byte sequence "\r\n\r\n" Refer to https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/TCPSockets.html
 
